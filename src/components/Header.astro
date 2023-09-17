@@ -1,0 +1,69 @@
+---
+import { SITE_NAME } from "../consts";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import ToggleTheme from "./ToggleTheme";
+import { GITHUB_HANDLE, MASTODON_HANDLE, LINKEDIN_HANDLE } from "../consts";
+---
+
+<header
+  class="container mx-auto md:max-w-4xl p-4 fixed top-0 left-0 right-0 z-50 bg-stone-100 dark:bg-stone-900"
+>
+  <section class="flex justify-between items-center">
+    <a class="text-3xl text-blue-600 dark:text-blue-400 font-righteous" href="/">{SITE_NAME}</a>
+    <div class="flex items-center space-x-1">
+      <a
+        href={MASTODON_HANDLE}
+        target="_blank"
+        class="w-8 h-8 flex items-center justify-center rounded-md p-1.5 hover:bg-stone-300 dark:hover:bg-stone-800"
+      >
+        <i class="bi bi-mastodon" style={{ fontSize: "1.5em" }}></i>
+        <span class="sr-only">Twitter</span>
+      </a>
+      <a
+        href={GITHUB_HANDLE}
+        target="_blank"
+        class="w-8 h-8 flex items-center justify-center rounded-md p-1.5 hover:bg-stone-300 dark:hover:bg-stone-800"
+      >
+        <i class="bi bi-github" style={{ fontSize: "1.5em" }}></i>
+        <span class="sr-only">Github</span>
+      </a>
+      <a
+        href={LINKEDIN_HANDLE}
+        target="_blank"
+        class="w-8 h-8 flex items-center justify-center rounded-md p-1.5 hover:bg-stone-300 dark:hover:bg-stone-800"
+      >
+        <i class="bi bi-linkedin" style={{ fontSize: "1.5em" }}></i>
+        <span class="sr-only">Linkedin</span>
+      </a>
+      <a
+        href="/rss.xml"
+        target="_blank"
+        class="w-8 h-8 flex items-center justify-center rounded-md p-1.5 hover:bg-stone-300 dark:hover:bg-stone-800"
+      >
+        <i class="bi bi-rss-fill" style={{ fontSize: "1.5em" }}></i>
+        <span class="sr-only">RSS</span>
+      </a>
+      <a
+        href="/sitemap-index.xml"
+        target="_blank"
+        class="w-8 h-8 flex items-center justify-center rounded-md p-1.5 hover:bg-stone-300 dark:hover:bg-stone-800"
+      >
+        <i class="bi bi-diagram-3-fill" style={{ fontSize: "1.5em" }}></i>
+        <span class="sr-only">Sitemap</span>
+      </a>
+      <ToggleTheme client:only />
+    </div>
+  </section>
+  <section>
+    <nav>
+      <ul class="flex mt-2 gap-6">
+        <li>
+          <a href="/">Blog</a>
+        </li>
+        <li>
+          <a href="/about">Sobre mí</a>
+        </li>
+      </ul>
+    </nav>
+  </section>
+</header>
