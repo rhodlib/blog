@@ -1,11 +1,5 @@
 ---
-import {
-  SITE_DESCRIPTION,
-  SITE_NAME,
-  SITE_TITLE,
-  TWITTER_HANDLE,
-  CLOUDINARY_NAME,
-} from "../consts";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, CLOUDINARY_NAME } from "../consts";
 
 export interface Props {
   title?: string;
@@ -70,8 +64,6 @@ function getOgImage({
     `fl_layer_apply,g_south_west,x_150,y_100`,
 
     // PROFILE IMAGE
-    // dynamically fetched from my twitter profile
-    `l_twitter_name:${TWITTER_HANDLE}`,
     // Transformations
     `c_thumb,g_face,r_max,w_380,h_380,q_100`,
     // Positioning
