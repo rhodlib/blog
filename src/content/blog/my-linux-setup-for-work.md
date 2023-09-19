@@ -1,11 +1,16 @@
 ---
-title: "Mi entorno de desarrollo 2022"
-description: "Mi entorno de desarrollo para trabajar con React y React Native en linux"
-seriesId: entornos-de-desarrollo
+title: "My linux setup for work 2022"
+description: "My setup to work as a frontend developer with React & React Native"
+seriesId: setup-and-configs
 orderInSeries: 1
 pubDate: "May 25 2022"
+cover: "/src/assets/ubuntu.jpg"
+coverAlt: "Ubuntu image"
 tags:
-  - mi-entorno-linux-para-trabajar
+  - linux
+  - setup
+  - code
+  - work
 ---
 
 # My minimal linux setup for work

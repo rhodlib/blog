@@ -39,13 +39,13 @@ const series = (await getCollection("series")).find((s) => s.data.id === seriesI
 
 <BaseLayout title={title} description={description} postMeta={{ pubDate, tags }}>
   <div
-    class="prose prose-stone max-w-none prose-headings:scroll-my-20 prose-a:underline-offset-2 prose-a:decoration-blue-600 prose-img:rounded-lg dark:prose-invert"
+    class="prose prose-gray max-w-none prose-headings:scroll-my-20 prose-a:underline-offset-2 prose-a:decoration-blue-600 prose-img:rounded-lg dark:prose-invert"
   >
     <h1>{title}</h1>
     <div class="font-semibold text-xs uppercase space-y-2">
       <div class="flex flex-wrap items-center space-x-1">
         <span>
-          Publicado en <FormattedDate date={pubDate} />
+          Published on <FormattedDate date={pubDate} />
         </span>
         {
           updatedDate && (
@@ -65,7 +65,7 @@ const series = (await getCollection("series")).find((s) => s.data.id === seriesI
           tags.map((tag) => (
             <a
               href={`/tags/${tag.slice(1)}`}
-              class="no-underline bg-stone-300 hover:bg-stone-400 dark:bg-stone-700 dark:hover:bg-stone-600 p-1 px-4 rounded-full"
+              class="no-underline bg-gray-300 hover:bg-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600 p-1 px-4 rounded-full"
             >
               {tag}
             </a>
@@ -88,9 +88,9 @@ const series = (await getCollection("series")).find((s) => s.data.id === seriesI
       {
         headings.length > 0 && (
           <nav class="hidden text-sm space-y-2 mt-9 lg:block lg:w-4/12 h-screen sticky top-20 z-40">
-            <span class="font-black dark:text-white text-black uppercase">En esta página</span>
+            <span class="font-black dark:text-white text-black uppercase">Shortcuts</span>
             <TableOfContent headings={headings} />
-            <div class="border-stone-700 border-b-[1px]" />
+            <div class="border-gray-700 border-b-[1px]" />
             <div class="flex float-right">
               <ScrollToTopButton client:idle />
             </div>
@@ -110,7 +110,7 @@ const series = (await getCollection("series")).find((s) => s.data.id === seriesI
     // Copy button
     const copyButton = document.createElement("button");
     copyButton.className =
-      "p-1 px-2 rounded-md text-stone-300 text-xs bg-stone-800 hover:bg-stone-700";
+      "p-1 px-2 rounded-md text-gray-300 text-xs bg-gray-800 hover:bg-gray-700";
     copyButton.innerHTML = "Copy";
 
     // Header title
@@ -120,7 +120,7 @@ const series = (await getCollection("series")).find((s) => s.data.id === seriesI
     // Header div
     const headerDiv = document.createElement("div");
     headerDiv.className =
-      "flex w-full bg-stone-950 border-b-[0.5px] border-blue-400 rounded-t-lg mt-10 text-base items-center justify-between py-2 px-4";
+      "flex w-full bg-gray-950 border-b-[0.5px] border-blue-400 rounded-t-lg mt-10 text-base items-center justify-between py-2 px-4";
 
     // Current title
     const titleDiv = codeBlock.querySelector("div[data-rehype-pretty-code-title]");

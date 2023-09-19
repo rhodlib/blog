@@ -21,7 +21,7 @@ export default function ToggleTheme() {
 
   return (
     <button
-      class="w-10 h-10 flex items-center justify-center rounded-md hover:bg-stone-300 dark:hover:bg-stone-800"
+      class="w-10 h-10 flex items-center justify-center rounded-md hover:bg-gray-300 dark:hover:bg-gray-800"
       onClick={toggleTheme}
     >
       {theme === "dark" ? (
